@@ -43,19 +43,15 @@ jQuery(document).ready(function () {
     $('img').attr('loading', 'lazy');
 
     // AOS Animation
-    window.addEventListener('load', () => {
-        AOS.init({
-          duration: 1000,
-          easing: 'ease-in-out',
-          once: true,
-          mirror: false
-        })
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
     });
 
     // Preloader
-    $(window).on('load', function () {
-        $('#preloader').delay(1000).fadeOut('slow');
-    });
+    $('#preloader').delay(1000).fadeOut('slow');
 
     // Back to Top
     let backtotop = document.querySelector('.back-to-top');
